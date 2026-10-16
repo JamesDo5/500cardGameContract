@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "unit": "ms",
+  "defaultPace": "competitive",
+  "competitive": {
+    "deal": 15000,
+    "bid": 45000,
+    "blind": 60000,
+    "play": 30000
+  },
+  "relaxedMultiplier": 3,
+  "serverGraceMs": 1000,
+  "clientAutoplayMarginMs": 1000,
+  "trickHoldMs": 1100,
+  "rematchDelayMs": 15000
+}

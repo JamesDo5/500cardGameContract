@@ -1,0 +1,12 @@
+{
+  "name": "@jamesdo5/500cardgame-contract",
+  "version": "1.0.0",
+  "description": "Wire surface and shared timing values agreed between the 500 card game client and server",
+  "type": "module",
+  "files": ["wire.json", "timeouts.json"],
+  "exports": {
+    "./wire.json": "./wire.json",
+    "./timeouts.json": "./timeouts.json"
+  },
+  "license": "UNLICENSED"
+}

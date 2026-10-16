@@ -1,0 +1,55 @@
+{
+  "version": "1.0.0",
+  "frame": ["type", "payload", "seq"],
+  "c2s": {
+    "join": ["gameId", "playerName", "playerToken"],
+    "requestSync": [],
+    "deal": [],
+    "bid": ["bid"],
+    "submitBlind": ["discards"],
+    "playCard": ["card"],
+    "ping": [],
+    "rematch": [],
+    "startGame": [],
+    "changeSeat": ["seat"],
+    "leave": [],
+    "setPace": ["pace"]
+  },
+  "s2c": {
+    "welcome": ["seat", "playerNames", "gameId", "playerToken"],
+    "playerNames": ["playerNames"],
+    "turn": ["pos", "deadlineMs"],
+    "deal": ["dealer", "hand"],
+    "bid": ["pos", "bid"],
+    "biddingResult": ["redeal", "winner", "bid", "trump"],
+    "blind": ["cards"],
+    "blindDone": ["pos"],
+    "cardPlayed": ["pos", "card", "auto"],
+    "trickResult": ["winner"],
+    "handScore": ["deltas", "scores"],
+    "gameOver": ["winnerTeam", "scores"],
+    "syncState": ["gameState", "dealer", "playerNames", "scores", "handScores", "hand", "hands", "bids", "trump", "winningBid", "bidWinner", "blind", "blindDone", "playedCards", "leader", "wonTricks", "turn", "pace", "winnerTeam"],
+    "error": ["code", "message", "refSeq"],
+    "pong": [],
+    "rematchCountdown": ["startsAtMs"],
+    "lobbyState": ["seats", "hostPos", "canStart", "pace"],
+    "playerLeft": ["pos", "name", "abandoned"],
+    "paceChanged": ["pace", "by"]
+  },
+  "gameState": {
+    "lobby": -1,
+    "betweenHands": 0,
+    "bidding": 1,
+    "bidSubmitted": 2,
+    "blind": 3,
+    "blindSubmitted": 4,
+    "play": 5,
+    "over": 6
+  },
+  "pace": ["competitive", "relaxed"],
+  "errorCodes": [
+    "WRONG_PHASE", "NOT_YOUR_TURN", "BAD_BID", "BAD_PAYLOAD", "NOT_IN_HAND", "ILLEGAL_CARD",
+    "ROOM_CLOSED", "ROOM_FULL", "NAME_TAKEN", "BAD_NAME", "NOT_JOINED", "UNKNOWN_TYPE", "UNKNOWN_GAME",
+    "BOTS_DISABLED", "NO_EMPTY_SEATS", "NOT_HOST", "NOT_ENOUGH_PLAYERS", "BAD_SEAT", "BAD_PACE"
+  ]
+}
