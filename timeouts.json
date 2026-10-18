@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "unit": "ms",
   "defaultPace": "competitive",
   "competitive": {
@@ -11,6 +11,6 @@
   "relaxedMultiplier": 3,
   "serverGraceMs": 1000,
   "clientAutoplayMarginMs": 1000,
-  "trickHoldMs": 1100,
+  "trickHoldMs": 2000,
   "rematchDelayMs": 15000
 }
